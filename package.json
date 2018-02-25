@@ -1,0 +1,43 @@
+{
+  "name": "eugenelyn.ch",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo . -d --serve bundle.js --live",
+    "build": "browserify . -o bundle.js -g uglifyify",
+    "dist": "mkdir -p dist && bash -c 'cp -r *.{js,html,css} assets dist'"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2040"
+          ]
+        }
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/data-doge/eugenelyn.ch"
+  },
+  "author": "data-doge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/data-doge/eugenelyn.ch/issues"
+  },
+  "homepage": "https://github.com/data-doge/eugenelyn.ch",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2040": "^1.1.1",
+    "babelify": "^7.3.0",
+    "browserify": "^13.3.0",
+    "budo": "^9.4.1",
+    "gh-pages": "^0.12.0",
+    "surge": "^0.19.0",
+    "uglifyify": "^3.0.4"
+  }
+}
