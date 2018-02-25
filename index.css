@@ -4,4 +4,17 @@ html, body {
   position: relative;
   height: 100%;
   font-family: Hangul;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+a {
+  font-size: 20px;
 }
